@@ -3,48 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>My Photo</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background: linear-gradient(135deg, #f0f0f0, #d0d0f0);
-      font-family: Arial, sans-serif;
-    }
-
-    .photo-container {
-      text-align: center;
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .photo-container:hover {
-      transform: scale(1.05);
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    img.zoomed {
-      transform: scale(1.5);
-      z-index: 10;
-    }
-
-    p {
-      margin-top: 10px;
-      color: #333;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="photo-container">
@@ -52,13 +11,6 @@
     <p>Click on the photo to zoom in/out!</p>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const img = document.getElementById('myPhoto');
-      img.addEventListener('click', () => {
-        img.classList.toggle('zoomed');
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
